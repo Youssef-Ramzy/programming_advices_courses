@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+int i = 400;
 
 void my_func(void)
 {
@@ -15,4 +15,6 @@ int main(void)
 
 	cout << "The local var of main is: " << i << endl;
 	my_func();
+	::i = 400; // This is how you edit the golobal var
+	cout << "The golobal var is: " << ::i << endl; // To accsess the golobal var use ::var_name
 }
