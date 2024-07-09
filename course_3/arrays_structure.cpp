@@ -1,72 +1,49 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-struct str_info {
+struct str_info
+{
 	string Name;
 	int Age;
 	string Phone;
 };
 
-// Prototype
-void welcome_app(str_info Person[]);
-void create_person(str_info Person[], int& choice);
-void print_person(str_info Person[], int& choice);
+
+void read_info(str_info& Info)
+{
+	cout << "Please enter the Name: ";
+	cin >> Info.Name;
+	cout << "Please enter the Age: ";
+	cin >> Info.Age;
+	cout << "Please enter the Phone: ";
+	cin >> Info.Phone;
+}
+
+void print_info(str_info& Info)
+{
+	cout << "Name: " << Info.Name << endl
+		 << "Age: " << Info.Age << endl
+		 << "Phone: " << Info.Phone << endl;
+}
+
+void read_persons_info(str_info Person[2])
+{
+	read_info(Person[0]);
+	read_info(Person[1]);
+}
+
+void print_persons_info(str_info Person[2])
+{
+	print_info(Person[0]);
+	print_info(Person[1]);
+}
 
 int main(void)
 {
 	str_info Person[2];
-	while(1)
-	{
-	welcome_app(Person);
-	}
-}
 
-void welcome_app(str_info Person[])
-{
-	int choice;
-
-	cout << "Welcom, to our program" << endl
-		 << "Please choise a task" << endl
-		 << "1-Create a Person." << endl
-		 << "2-Print a Person." << endl;
-	cin >> choice;
-	if (choice == 1)
-	{
-		create_person(Person, choice);
-	}
-	else
-	{
-		print_person(Person, choice);
-	}
-}
-
-void create_person(str_info Person[], int& choice)
-{
-	int i = 0; // Assuming we want to fill the first available slot
-
-	cout << "Please enter the person details:" << endl;
-	cout << "Name: ";
-	cin.ignore(); // Ignore the newline character left by cout
-	getline(cin, Person[i].Name);
-	cout << "Age: ";
-	cin >> Person[i].Age;
-	cin.ignore();
-	cout << "Phone: ";
-	getline(cin, Person[i].Phone);
-
-	cout << "Details saved successfully!" << endl;
-}
-
-void print_person(str_info Person[], int& choice)
-{
-	int i;
-	cout << "Please enter the person number: ";
-	cin >> i;
-	if(i >= 0 && i < 2) { // Ensure valid index
-		cout << "Name: " << Person[i].Name << endl
-			 << "Age: " << Person[i].Age << endl
-			 << "Phone: " << Person[i].Phone << endl;
-	} else {
-		cout << "Invalid person number entered." << endl;
-	}
+	read_persons_info(Person);
+	print_persons_info(Person);
 }
