@@ -11,39 +11,41 @@ struct str_info
 };
 
 
-void read_info(str_info& Info)
+int read_persons(str_info person[100], int& length)
 {
-	cout << "Please enter the Name: ";
-	cin >> Info.Name;
-	cout << "Please enter the Age: ";
-	cin >> Info.Age;
-	cout << "Please enter the Phone: ";
-	cin >> Info.Phone;
+	cout << "Please enter Persons number: ";
+	cin >> length;
+	for (int i = 0; i < length; i++)
+	{
+		printf("Person: %d\n", i + 1);
+		cout << "Please enter the Name: ";
+		cin >> person[i].Name;
+		cout << "Please enter the Age: ";
+		cin >> person[i].Age;
+		cout << "Please enter the Phone: ";
+		cin >> person[i].Phone;
+		cout << "--------------------\n";
+	}
+	return length;
 }
 
-void print_info(str_info& Info)
+void print_persons(str_info person[100], int length)
 {
-	cout << "Name: " << Info.Name << endl
-		 << "Age: " << Info.Age << endl
-		 << "Phone: " << Info.Phone << endl;
-}
-
-void read_persons_info(str_info Person[2])
-{
-	read_info(Person[0]);
-	read_info(Person[1]);
-}
-
-void print_persons_info(str_info Person[2])
-{
-	print_info(Person[0]);
-	print_info(Person[1]);
+	for (int i = 0; i < length; i++)
+	{
+		printf("Person: %d\n", i + 1);
+		cout << "Name: " << person[i].Name << endl
+			 << "Age: " << person[i].Age << endl
+			 << "Phone: " << person[i].Phone << endl;
+		cout << "--------------------\n";
+	}
 }
 
 int main(void)
 {
-	str_info Person[2];
+	str_info Person[100];
+	int length = 0;
 
-	read_persons_info(Person);
-	print_persons_info(Person);
+	read_persons(Person, length);
+	print_persons(Person, length);
 }
