@@ -11,7 +11,7 @@ struct str_info
 };
 
 
-int read_persons(str_info person[100], int& length)
+void read_persons(str_info person[100], int& length)
 {
 	cout << "Please enter Persons number: ";
 	cin >> length;
@@ -26,7 +26,6 @@ int read_persons(str_info person[100], int& length)
 		cin >> person[i].Phone;
 		cout << "--------------------\n";
 	}
-	return length;
 }
 
 void print_persons(str_info person[100], int length)
