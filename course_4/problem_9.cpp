@@ -32,6 +32,7 @@ int GetNumbersSum(int Numbers[3])
 
 	return Sum;
 }
+
 void PrintNumbers(int Sum)
 {
 	cout << Sum << endl;
