@@ -50,7 +50,7 @@ int main(void)
 
 // PRO solution
 
-void ReadNumbers(int& Num1, int& Num2, int& Num3)
+void ReadMarks(int& Num1, int& Num2, int& Num3)
 {
 	cout << "Please enter Three Number1?" << endl;
 	cin >> Num1;
@@ -76,7 +76,7 @@ int main(void)
 {
 	int Num1, Num2, Num3;
 
-	ReadNumbers(Num1, Num2, Num3);
+	ReadMarks(Num1, Num2, Num3);
 	PrintNumbers(SumOf3Numbers(Num1, Num2, Num3));
 
 	return 0;

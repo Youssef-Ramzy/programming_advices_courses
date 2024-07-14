@@ -50,7 +50,7 @@ int main(void)
 
 // PRO solution
 
-void ReadNumbers(int& Mark1, int& Mark2, int& Mark3)
+void ReadMarks(int& Mark1, int& Mark2, int& Mark3)
 {
 	cout << "Please enter Mark1?" << endl;
 	cin >> Mark1;
@@ -81,7 +81,7 @@ int main(void)
 {
 	int Mark1, Mark2, Mark3;
 
-	ReadNumbers(Mark1, Mark2, Mark3);
+	ReadMarks(Mark1, Mark2, Mark3);
 	PrintResult(CalculateAverage(Mark1, Mark2, Mark3));
 
 	return 0;
