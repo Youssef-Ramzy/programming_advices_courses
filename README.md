@@ -9,7 +9,7 @@ The repository is structured around the courses and learning resources I'm curre
 - **Notes**: Summaries of key concepts, theories, and practical applications.
 - **Code Snippets**: Relevant pieces of code that illustrate important concepts or solutions.
 - **Challenges & Solutions**: Descriptions of difficulties encountered during the course and how they were overcome.
-- **Resources**: Links to external articles, videos, forums, and other resources that contributed to my learning.
+- **Resources**: Links to external articles, videos, forums, and other resources that contributed to my learning. // I will add thoses later.
 
 ## How to Use This Repository
 
@@ -32,4 +32,4 @@ For any questions, comments, or to suggest improvements, please open an issue in
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is not licensed because I don't know how to license it :).
