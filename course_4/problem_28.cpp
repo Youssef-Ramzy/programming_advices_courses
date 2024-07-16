@@ -25,10 +25,10 @@ int ReadNumber(void)
 
 void PrintNumber(int N)
 {
-	cout << N << endl;
+	cout << "The Sum of odd numbers is: " << N << endl;
 }
 
-int OddNumberLoop(int N)
+int EvenNumberLoop(int N)
 {
 	int Sum = 0;
 
@@ -46,7 +46,7 @@ int main(void)
 	int N;
 
 	N = ReadNumber();
-	PrintNumber(OddNumberLoop(N));
+	PrintNumber(EvenNumberLoop(N));
 }
 
 
