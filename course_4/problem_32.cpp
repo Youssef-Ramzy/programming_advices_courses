@@ -28,6 +28,9 @@ int getNum()
 
 int getUpM(int Number, int M)
 {
+	if (M == 0)
+		return 1;
+
 	int Result = 1;
 
 	for (int i = 0; i < M; i++)
@@ -35,7 +38,7 @@ int getUpM(int Number, int M)
 		Result *= Number;
 	}
 
-	return Result;
+	return Result;       
 }
 
 void printResult(int Number)
