@@ -37,3 +37,33 @@ int main()
 }
 
 // PRO solution
+
+float ReadNumber(string Message)
+{
+    float Number = 0;
+    cout << Message << endl;
+    cin >> Number;
+
+    return Number;
+}
+
+float SumNubers()
+{
+    int Sum = 0, Number = 0, Counter = 1;
+
+    do
+    {
+        Number = ReadNumber("Please enter Nuber " + to_string(Counter));
+        if (Number == -99)
+            break;
+        Sum += Number;
+        Counter++;
+    } while (Number != -99);
+}
+
+int main()
+{
+    cout << endl << "Result = " << SumNubers() << endl;
+
+    return 0;
+}
