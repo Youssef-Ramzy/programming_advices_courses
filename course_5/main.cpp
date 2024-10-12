@@ -2,18 +2,17 @@
 using namespace std;
 
 /**
- * Problem # 4/2
- * Write a program to print all perfect numbers from 1 to N
- * Input: 
- * 500
+ * Problem # 5/2
+ * Write a program read a number, and then print all digit frequencies in that number
+ * Input
+ * 1223222
  * Output:
- * 6
- * 28
- * 496
+ * Digit 1 Frequency is 1 Time(s).
+ * Digit 2 Frequency is 5 Time(s).
+ * Digit 3 Frequency is 1 Time(S).
  */
 
-// Function to read a positive number from the user
-int ReadPositiveNumber(const string& Message)
+int ReadPositiveNumber(string Message)
 {
     int Number = 0;
     do
@@ -21,39 +20,44 @@ int ReadPositiveNumber(const string& Message)
         cout << Message << endl;
         cin >> Number;
     } while (Number <= 0);
+    
     return Number;
 }
 
-// Function to check if a number is perfect
-bool CheckIfPerfect(int Number)
+int CountDigitFrequency(short DigitToCheck, int Number)
 {
-    int PerfectSum = 0;
+    int FrqCount = 0, Remainder = 0;
 
-    for (int i = 1; i <= Number / 2; i++)  // Loop up to Number / 2
+    while (Number > 0)
     {
-        if (Number % i == 0)
-            PerfectSum += i;
+        Remainder = Number % 10;
+        Number /= 10;
+        if (DigitToCheck == Remainder)
+            FrqCount++;
     }
-    
-    return Number == PerfectSum;
+
+    return FrqCount;
 }
 
-// Function to print all perfect numbers from 1 to N
-void PrintPerfectNumbers(int N)
+void PrintAllDigitsFrequency(int Number)
 {
-    cout << "Perfect numbers from 1 to " << N << " are:" << endl;
-    for (int num = 1; num <= N; num++)
+    cout << endl;
+    for (int i = 0; i < 10; i++)
     {
-        if (CheckIfPerfect(num))
+        short DigitFrequency = 0;
+
+        DigitFrequency = CountDigitFrequency(i, Number);
+        if (DigitFrequency > 0)
         {
-            cout << num << endl;
+            cout << "Digit " << i << " Frequency is " << DigitFrequency << " Time(s).\n";
         }
     }
 }
 
 int main()
 {
-    int N = ReadPositiveNumber("Please enter the upper limit (N):");
-    PrintPerfectNumbers(N);
+    int Number = ReadPositiveNumber("Please enter the main number:");
+    PrintAllDigitsFrequency(Number);
+
     return 0;
 }
