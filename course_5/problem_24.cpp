@@ -49,7 +49,7 @@ void PrintArray(int Array[], int Length)
     }
 }
 
-void SumNumber(int Array[], int Length)
+void AvgNumber(int Array[], int Length)
 {
     int Max = 0;
 
@@ -69,7 +69,7 @@ int main()
 
     WriteArray(Array, Length);
     PrintArray(Array, Length);
-    SumNumber(Array, Length);
+    AvgNumber(Array, Length);
 
     return 0;
 }
