@@ -50,7 +50,7 @@ void PrintArray(int Array[], int Length)
     }
 }
 
-void AvgNumber(int Array[], int Length)
+void CopyArray(int Array[], int Length)
 {
     float Avg = 0;
 
@@ -70,7 +70,7 @@ int main()
 
     WriteArray(Array, Length);
     PrintArray(Array, Length);
-    AvgNumber(Array, Length);
+    CopyArray(Array, Length);
 
     return 0;
 }
