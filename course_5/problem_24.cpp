@@ -49,7 +49,7 @@ void PrintArray(int Array[], int Length)
     }
 }
 
-void MaxNumber(int Array[], int Length)
+void MineNumber(int Array[], int Length)
 {
     int Max = 0;
 
@@ -69,7 +69,7 @@ int main()
 
     WriteArray(Array, Length);
     PrintArray(Array, Length);
-    MaxNumber(Array, Length);
+    MineNumber(Array, Length);
 
     return 0;
 }
