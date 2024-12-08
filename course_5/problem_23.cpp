@@ -33,7 +33,7 @@ void WriteArray(int Array[], int Lenght)
 {
     for (int i = 0; i < Lenght; i++)
     {
-        Array[i] = GenerateRandomNumber(49, 57);
+        Array[i] = GenerateRandomNumber(0, 100);
     }
 }
 
