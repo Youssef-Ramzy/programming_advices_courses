@@ -81,14 +81,14 @@ bool SearchForNumber(int Array[100], int ArrayLength, int SearchNumber)
 
 void PrintSearchResult(int Array[100], int ArrayLength, int SearchNumber)
 {
+    cout << "Number you are looking for is: " << SearchNumber << endl;
+
     if (SearchForNumber(Array, ArrayLength, SearchNumber))
     {
-        cout << "Number you are looking for is: " << SearchNumber << endl;
         cout << "Yes. The number is found :-)" << endl;
     }
     else
     {
-        cout << "Number you are looking for is: " << SearchNumber << endl;
         cout << "NO, The number is not found" << endl;
     }
 }
