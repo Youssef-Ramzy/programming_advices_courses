@@ -42,7 +42,7 @@ string CreateRandomKey(void)
     {
         for (int j = 0; j < 4; j++)
         {
-            Key += CreateRandomChar();            
+            Key += CreateRandomChar();
         }
         if (i < 3)
             Key += "-";
