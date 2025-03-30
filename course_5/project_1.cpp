@@ -66,7 +66,7 @@ void PrintResult(string Result)
         cout << "*********************" << endl;
         cout << "You lose" << endl;
     }
-    else if(Result == "win")
+    else if(Result == "draw")
     {
         cout << "*********************" << endl;
         cout << "You draw" << endl;
