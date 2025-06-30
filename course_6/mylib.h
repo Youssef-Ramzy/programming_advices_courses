@@ -4,6 +4,7 @@
 namespace mylib
 {
     int ReadNumber();
+    int SumOfFour(int a, int b, int c = 0, int d = 0);
 }
 
 #endif
