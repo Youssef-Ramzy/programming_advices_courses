@@ -18,4 +18,14 @@ namespace mylib
     {
         return (a + b + c + d);
     }
+
+    void PrintNumbersFromTo(int N, int M)
+    {
+        if (N <= M)
+        {
+            cout << N << endl;
+            PrintNumbersFromTo(N + 1, M);
+            cout << "This is The exit of The " << N << "th func" << endl;
+        }
+    }
 }
